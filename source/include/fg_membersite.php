@@ -374,7 +374,7 @@ class FGMembersite {
         "$confirm_url\r\n".
         "\r\n".
         "Regards,\r\n".
-        "equitharn\r\n".
+        "webmaster\r\n".
         $this->sitename;
         if(!$mailer->Send())
         {
@@ -463,7 +463,7 @@ class FGMembersite {
         $this->sitename."/confirmreg.php and fill in ".$confirmcode."\r\n".
         "\r\n".
         "Regards,\r\n".
-        "equitharn\r\n".
+        "webmaster\r\n".
         $this->sitename;
         if(!$mailer->Send())
         {
@@ -534,7 +534,7 @@ class FGMembersite {
         "If this was done in error, or not by you, please contact us immediately at ".$this->admin_email."\r\n".
         "\r\n".
         "Regards,\r\n".
-        "equitharn\r\n".
+        "webmaster\r\n".
         $this->sitename;
         if(!$mailer->Send())
         {
@@ -815,7 +815,7 @@ class FGMembersite {
         "There was a request to reset your password at ".$this->sitename."\r\n".
         "Please click the link below to complete the request: \r\n".$link."\r\n\r\n".
         "Regards,\r\n".
-        "equitharn\r\n".
+        "webmaster\r\n".
         $this->sitename;
         
         if(!$mailer->Send())
@@ -883,7 +883,7 @@ class FGMembersite {
         "\r\n".
         "\r\n".
         "Regards,\r\n".
-        "equitharn\r\n".
+        "webmaster\r\n".
         $this->sitename;
         
         if(!$mailer->Send())
