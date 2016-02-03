@@ -70,20 +70,20 @@ class PHPMailer
      * The From email address for the message.
      * @var string
      */
-    public $From = 'admin@equitharn.in';
+    public $From = '';
 
     /**
      * The From name of the message.
      * @var string
      */
-    public $FromName = 'equitharn';
+    public $FromName = '';
 
     /**
      * The Sender email (Return-Path) of the message.
      * If not empty, will be sent via -f to sendmail or as 'MAIL FROM' in smtp mode.
      * @var string
      */
-    public $Sender = 'admin@equitharn.in';
+    public $Sender = '';
 
     /**
      * The Return-Path of the message.
@@ -93,7 +93,7 @@ class PHPMailer
      * it's the receiver's job (RFC5321 section 4.4), so this no longer does anything.
      * @link https://tools.ietf.org/html/rfc5321#section-4.4 RFC5321 reference
      */
-    public $ReturnPath = 'admin@equitharn.in';
+    public $ReturnPath = '';
 
     /**
      * The Subject of the message.
