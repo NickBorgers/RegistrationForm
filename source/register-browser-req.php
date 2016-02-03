@@ -21,7 +21,7 @@ if(isset($_POST['submitted']))
       <link rel="stylesheet" href="stylesheets/base.css">
       <link rel="stylesheet" href="stylesheets/skeleton.css">
       <link rel="stylesheet" href="stylesheets/layout.css">
-      <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
+      <script type='text/javascript' src='scripts/gen_validatorv4.js'></script>
 </head>
 <body>
 <!-- Form Code Start -->
