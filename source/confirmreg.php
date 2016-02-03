@@ -38,7 +38,7 @@ if(isset($_GET['code']))
       <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
       <title>Confirm registration</title>
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
-      <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
+      <script type='text/javascript' src='scripts/gen_validatorv4.js'></script>
 </head>
 <body>
 

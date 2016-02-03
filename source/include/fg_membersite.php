@@ -366,7 +366,7 @@ class FGMembersite {
         
         $confirmcode = $formvars['confirmcode'];
         
-        $confirm_url = $this->GetAbsoluteURLFolder().'confirmreg.php?code='.$confirmcode;
+        $confirm_url = $this->GetAbsoluteURLFolder().'/confirmreg.php?code='.$confirmcode;
         
         $mailer->Body ="Hello ".SanitizeUsername($formvars['username'])."\r\n\r\n".
         "Thanks for your registration with ".$this->sitename."\r\n".
@@ -449,7 +449,7 @@ class FGMembersite {
 
         $confirmcode = SanitizeHex($confirmcode);
 
-        $confirm_url = $this->GetAbsoluteURLFolder().'confirmreg.php?code='.$confirmcode;
+        $confirm_url = $this->GetAbsoluteURLFolder().'/confirmreg.php?code='.$confirmcode;
 
         $browser = get_browser(null,true);
         $browserDescription = SanitizeBrowserName($browser["browser"]." on ".$browser["platform"]);
@@ -1074,7 +1074,7 @@ class FGMembersite {
     
     function HandleDBError($err)
     {
-        $this->HandleError($err."\r\n mysqlerror:".mysql_error());
+        $this->HandleError($err."\r\n mysqlerror:".mysqli_error($this->connection));
     }
     
     function GetFromAddress()
@@ -1085,7 +1085,7 @@ class FGMembersite {
         }
         
         $host = $_SERVER['SERVER_NAME'];
-        $from ="nobody@$host";
+        $from ="admin@$host";
         return $from;
     } 
     
@@ -1819,7 +1819,7 @@ class FGMembersite {
     {
         if ($this->CSRFTokenRequired) {
             if (!($_SESSION['CSRFtoken'] == SanitizeHex($_POST['CSRFtoken']) || $_SESSION['CSRFtoken'] == SanitizeHex($_GET['CSRFtoken']))) {
-                $this->HandleError("Could not confirm Cross-Site Request Forgery token. Access denied.");
+                $this->HandleError("Could not confirm Cross-Site Request Forgery token. Login Access denied.");
                 return false;
             }
         }
@@ -2313,4 +2313,3 @@ class FGMembersite {
     }
     // End Transaction Loggers
 }
-?>
